@@ -1,6 +1,6 @@
-Super Lemonade Factory Part Two 
-=======----
------------
+-----------------------------------
+| Super Lemonade Factory Part Two |
+-----------------------------------
 
 Lemonade:
 - [x] Make BGs bigger, need to be HD 1920x1080
@@ -15,19 +15,22 @@ Cheats
 
 F10 (in debug mode) complete level with all kills registered.
 
------------------------------------
-| Super Lemonade Factory Part Two |
------------------------------------
+----
 
 Company		: Initials Video Games
+
 Website		: http://slf2.initialsgames.com/
-Platform	: PC
-Projected Platforms: Ouya, OSX, Linux
+
+Platform	: PC, OUYA
+
+Projected Platforms: OSX, Linux
+
 Other Platforms: iOS - https://itunes.apple.com/au/app/super-lemonade-factory-part/id727504536?mt=8
 
 ------------------------------------
 
 Description	:
+
 Usually when you see a description of a sequel that starts with "The two main characters are back and bigger than ever" it's a sure sign of a cash grab. Andre and Liselot are back, and this game is bigger than ever! Super Lemonade Factory Two has more of everything you loved about the first, more zany dialog, more gorgeous pixel art and more spikes. Taking place around the globe in Sydney Australia, New York City and a military base.
 
 History		:
