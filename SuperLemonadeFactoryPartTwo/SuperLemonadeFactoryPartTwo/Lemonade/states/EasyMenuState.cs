@@ -365,6 +365,16 @@ namespace Lemonade
 
         override public void update()
         {
+            
+            if (this.elapsedInState > 1.5f)
+            {
+                PlayerIndex pi;
+                if (FlxG.gamepads.isNewButtonPress(Buttons.Back, FlxG.controllingPlayer, out pi) || FlxG.keys.justPressed(Keys.Escape))
+                {
+                    FlxG.Game.Exit();
+                }
+            }
+
             if (FlxG.debug && FlxGlobal.cheatString == "ol")
             {
                 if (!possibleLocations.Contains("warehouse"))
