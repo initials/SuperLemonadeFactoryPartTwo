@@ -38,6 +38,16 @@ namespace Loader_SuperLemonadeFactory
             //Lemonade.Lemonade_Globals.PAID_VERSION = Lemonade.Lemonade_Globals.PIRATE_MODE;
             Lemonade.Lemonade_Globals.PAID_VERSION = Lemonade.Lemonade_Globals.FULL_MODE;
 
+#if DEMO
+            Lemonade.Lemonade_Globals.PAID_VERSION = Lemonade.Lemonade_Globals.DEMO_MODE;
+#endif
+#if FULL
+            Lemonade.Lemonade_Globals.PAID_VERSION = Lemonade.Lemonade_Globals.FULL_MODE;
+#endif
+#if PIRATE
+            Lemonade.Lemonade_Globals.PAID_VERSION = Lemonade.Lemonade_Globals.PIRATE_MODE;
+#endif
+
 
             FlxG.BUILD_TYPE = FlxG.BUILD_TYPE_PC;
 
