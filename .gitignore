@@ -39,9 +39,7 @@ local.properties
 
 # User-specific files
 *.suo
-*.user
 *.sln.docstates
-*.contentproj
 *.cachefile
 
 # Build results
@@ -65,9 +63,6 @@ local.properties
 *.vspscc
 .builds
 *.dotCover
-XNAModeContent/music/ralph/*.mp3
-XNAModeContent/music/gwd/*.mp3
-XNAModeContent/Lemonade/music/*.mp3
 
 ## TODO: If you have NuGet Package Restore enabled, uncomment this
 #packages/
