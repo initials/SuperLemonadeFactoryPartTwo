@@ -35,15 +35,15 @@ namespace Lemonade
 
             play("idle");
             addAnimationCallback(resetAfterDeath);
-            runSpeed = 50;
+            runSpeed = 40;
 
             width = 10;
             height = 41;
             setOffset(20, 39);
             setDrags(1251, 0);
 
-            maxVelocity.X = 530;
-            maxVelocity.Y = 2830;
+            maxVelocity.X = 330;
+            maxVelocity.Y = 2130;
 
 			#if __ANDROID__
 			maxVelocity.X/=1.75f;
