@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="80" height="80" tilewidth="20" tileheight="20">
- <tileset firstgid="1" name="tiles_sydney" tilewidth="20" tileheight="20">
-  <image source="../../../../../XNAModeContent/Lemonade/tiles_sydney.png" width="400" height="400"/>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="80" height="80" tilewidth="20" tileheight="20" nextobjectid="11">
+ <tileset firstgid="1" name="tiles_sydney" tilewidth="20" tileheight="20" tilecount="400">
+  <image source="../../../../../SuperLemonadeFactoryPartTwoContent/Lemonade/tiles_sydney.png" width="400" height="400"/>
   <terraintypes>
    <terrain name="regularBlocks" tile="-1"/>
   </terraintypes>
@@ -174,33 +174,36 @@
 129,132,133,131,133,132,130,134,130,134,134,130,131,130,132,134,130,130,132,132,131,132,133,131,131,132,134,134,131,132,133,130,133,131,132,134,131,134,133,130,132,133,131,133,133,131,134,130,133,132,133,132,134,130,132,130,133,132,130,131,131,133,133,132,131,133,132,132,131,130,133,134,133,134,134,130,133,132,133,135
 </data>
  </layer>
- <objectgroup name="boxes" width="80" height="80">
-  <object x="440" y="740">
+ <objectgroup name="boxes">
+  <object id="1" x="440" y="740">
    <polyline points="0,0 0,180"/>
   </object>
-  <object x="580" y="740">
+  <object id="2" x="580" y="740">
    <polyline points="0,0 0,180"/>
   </object>
-  <object x="780" y="740">
+  <object id="3" x="780" y="740">
    <polyline points="0,0 0,180"/>
   </object>
-  <object x="300" y="800">
+  <object id="4" x="300" y="800">
    <polyline points="0,0 0,-140 620,-140 620,0"/>
   </object>
-  <object x="160" y="940">
+  <object id="5" x="160" y="940">
    <polyline points="0,0 0,400 180,400 180,480"/>
   </object>
-  <object x="1400" y="180">
+  <object id="6" x="1400" y="180">
    <polyline points="0,0 20,0 20,400 -140,400 -140,1240"/>
   </object>
-  <object x="1380" y="740">
+  <object id="7" x="1380" y="740">
    <polyline points="0,0 120,0 120,300 -120,300 -120,0 0,0"/>
   </object>
-  <object x="1400" y="1420">
+  <object id="8" x="1400" y="1420">
    <polyline points="0,0 100,0 100,-440 -140,-440 -140,0 0,0"/>
   </object>
-  <object x="1500" y="180">
+  <object id="9" x="1500" y="180">
    <polyline points="0,0 0,560 -240,560"/>
+  </object>
+  <object id="10" x="404" y="159">
+   <polyline points="0,18 96,19 129,54 319,53 381,78 421,79"/>
   </object>
  </objectgroup>
 </map>

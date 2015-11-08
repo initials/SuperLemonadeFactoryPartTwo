@@ -174,7 +174,9 @@
     <Content Include="Lemonade\characters\reference\Liselot.h" />
     <Content Include="Lemonade\characters\reference\Player.h" />
     <Content Include="Lemonade\levels\custom\PLACE_CUSTOM_LEVELS_HERE.txt" />
-    <Content Include="Lemonade\script\script.xml" />
+    <None Include="Lemonade\script\script.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\XNAFlixel\XFlixel\XFlixel.csproj">

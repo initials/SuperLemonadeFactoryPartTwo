@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="60" height="60" tilewidth="20" tileheight="20">
- <tileset firstgid="1" name="tiles_sydney" tilewidth="20" tileheight="20">
-  <image source="../../../../../XNAModeContent/Lemonade/tiles_sydney.png" width="400" height="400"/>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="20" tileheight="20" nextobjectid="6">
+ <tileset firstgid="1" name="tiles_sydney" tilewidth="20" tileheight="20" tilecount="400">
+  <image source="../../../../../SuperLemonadeFactoryPartTwoContent/Lemonade/tiles_sydney.png" width="400" height="400"/>
   <terraintypes>
    <terrain name="regularBlocks" tile="-1"/>
   </terraintypes>
@@ -154,21 +154,21 @@
 129,134,133,131,131,133,130,132,131,130,130,131,130,130,131,130,133,133,131,131,130,131,133,134,131,133,134,130,132,133,134,134,132,134,134,131,134,131,133,133,130,130,134,134,133,130,134,131,130,133,130,133,132,130,134,133,133,133,132,135
 </data>
  </layer>
- <objectgroup name="boxes" width="60" height="60">
-  <object x="180" y="180">
+ <objectgroup name="boxes">
+  <object id="1" x="180" y="180">
    <polyline points="40,0 720,0"/>
   </object>
-  <object x="420" y="380">
+  <object id="2" x="420" y="380">
    <polyline points="0,0 0,100 20,120 40,120 60,100 60,0 40,-20 20,-20 0,0"/>
   </object>
-  <object x="600" y="660">
+  <object id="3" x="600" y="660">
    <polyline points="160,-140 160,20 180,40 200,40 220,20 220,-140 200,-160 180,-160 160,-140"/>
   </object>
-  <object x="140" y="360">
+  <object id="4" x="140" y="360">
    <polyline points="0,0 0,200 180,200 180,380"/>
   </object>
-  <object x="1040" y="700">
-   <polyline points="0,0 0,100 20,100"/>
+  <object id="5" x="1040" y="700">
+   <polyline points="20,1 20,101 -233,225"/>
   </object>
  </objectgroup>
 </map>

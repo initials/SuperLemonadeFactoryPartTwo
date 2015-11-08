@@ -183,6 +183,9 @@ namespace Lemonade
                     velocity.X = 0;
                     
                     FlxG.play("Lemonade/sfx/SndExp", 0.5f, false);
+
+                    ((Actor)(obj)).methodOfDeath = "crate";
+
                     
                 }
                 else if (obj.GetType().ToString() == "Lemonade.Army" && obj.dead == false)
@@ -194,6 +197,8 @@ namespace Lemonade
 
                     FlxG.play("Lemonade/sfx/SndExp", 0.5f, false);
 
+                    ((Actor)(obj)).methodOfDeath = "crate";
+
                 }
                 else if (obj.GetType().ToString() == "Lemonade.Chef" && obj.dead == false)
                 {
@@ -204,6 +209,8 @@ namespace Lemonade
 
                     FlxG.play("Lemonade/sfx/SndExp", 0.5f, false);
 
+                    ((Actor)(obj)).methodOfDeath = "crate";
+
                 }
                 else if (obj.GetType().ToString() == "Lemonade.Inspector" && obj.dead == false)
                 {
@@ -213,6 +220,8 @@ namespace Lemonade
                     velocity.X = 0;
 
                     FlxG.play("Lemonade/sfx/SndExp", 0.5f, false);
+
+                    ((Actor)(obj)).methodOfDeath = "crate";
                 }
             }
 

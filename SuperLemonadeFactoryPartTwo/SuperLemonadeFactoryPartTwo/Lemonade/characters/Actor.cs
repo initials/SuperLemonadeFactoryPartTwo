@@ -16,6 +16,7 @@ namespace Lemonade
         protected const float trampolineMaxLimit = 0.065f;
         public float dashTimer = 200000;
         protected const float dashMaxLimit = 0.075f;
+        public string methodOfDeath;
 
         /// <summary>
         /// reference to liselot for destroying piggyback action
@@ -26,6 +27,9 @@ namespace Lemonade
             : base(xPos, yPos)
         {
             trampolineTimer = float.MaxValue;
+
+
+            addAnimationCallback(resetAfterDeath);
 
             play("idle");
 
@@ -76,25 +80,54 @@ namespace Lemonade
         public override void overlapped(FlxObject obj)
         {
             base.overlapped(obj);
+
+            
+
             if (obj.GetType().ToString() == "Lemonade.Trampoline" && !dead)
             {
                 velocity.Y = -1000;
                 trampolineTimer = 0.0f;
+                //this.methodOfDeath = obj.GetType().ToString();
             }
             else if (obj.GetType().ToString() == "Lemonade.Ramp")
             {
                 float delta = x % 20;
-
+                //this.methodOfDeath = obj.GetType().ToString();
                 //FlxU.solveXCollision(obj, null);
 
             }
             else if (obj.GetType().ToString() == "Lemonade.Spike")
             {
-                //Console.WriteLine("Spike overlapp");
+                //Console.WriteLine("Spike overlapp: " + this.GetType().ToString());
+
                 if (dead == false && onScreen() )  FlxG.play("Lemonade/sfx/deathSFX", 0.8f, false);
                 
                 hurt(1);
 
+                this.methodOfDeath = obj.GetType().ToString();
+
+            }
+        }
+
+        public void resetAfterDeath(string Name, uint Frame, int FrameIndex)
+        {
+            //Console.WriteLine("Name {0} Frame {1}",Name, Frame);
+
+            if (this.GetType().ToString() == "Lemonade.Army" || 
+                this.GetType().ToString() == "Lemonade.Inspector" || 
+                this.GetType().ToString() == "Lemonade.Worker" || 
+                this.GetType().ToString() == "Lemonade.Chef"  )
+            {
+                if (Name == "death" && Frame >= _curAnim.frames.Length - 1 && this.methodOfDeath=="Lemonade.Spike")
+                {
+                    reset(originalPosition.X, originalPosition.Y);
+                    dead = false;
+                    //control = Controls.player;
+                    //play("idle");
+
+                    this.startPlayingBack();
+
+                }
             }
         }
 

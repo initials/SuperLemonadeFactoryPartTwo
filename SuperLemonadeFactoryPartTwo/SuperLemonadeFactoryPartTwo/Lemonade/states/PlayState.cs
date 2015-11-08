@@ -643,7 +643,7 @@ namespace Lemonade
             // Run cheats.
             if (FlxG.debug == true && elapsedInState>0.2f)
             {
-                if (FlxGlobal.cheatString == "exits")
+                if (FlxGlobal.cheatString == "exits" || (FlxG.keys.F2 && FlxG.debug))
                 {
                     andre.at(exit);
                     liselot.at(exit);
