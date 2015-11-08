@@ -384,8 +384,11 @@ namespace Lemonade
                     FlxPath xpath = new FlxPath(null);
                     //xpath.add(Int32.Parse(item["x"]), Int32.Parse(item["y"]));
                     xpath.addPointsUsingStrings(item["pointsX"], item["pointsY"]);
-                    movingPlatform.followPath(xpath, 150, FlxSprite.PATH_YOYO, false);
+                    movingPlatform.followPath(xpath, 100, FlxSprite.PATH_YOYO, false);
                     movingPlatform.pathCornering = 0.0f;
+                    movingPlatform.path = xpath;
+                    movingPlatform.startFollowingPath();
+
                 }
 
 
@@ -918,7 +921,7 @@ namespace Lemonade
             {
                 if (transitionPause == 0.0f)
                 {
-                    FlxG.play("initials/initials_empire_tagtone4", 0.8f, false);
+                    FlxG.play("flixel/initials/initials_empire_tagtone4", 0.8f, false);
                 }
 
                 int incompleteScale = 2;

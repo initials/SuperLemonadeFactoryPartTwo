@@ -29,7 +29,7 @@ namespace Lemonade
             addAnimation("dash", new int [] {79} ,0);
             addAnimation("idle", new int [] {51} ,0);
             addAnimation("talk", new int [] {51,48,51,49,51,50} ,12);
-            addAnimation("jump", new int [] {46,47,46,46} ,4 , true);
+            addAnimation("jump", new int[] { 46, 47, 46, 46, 46, 47, 46, 46, 46, 47, 46, 46, 46, 47, 46, 46, 46, 47, 46, 46, 46, 47, 46, 46 }, 4, true);
             addAnimation("death", new int [] {60,60,61,61,62,62,63,63} ,12 , false);
 
             play("idle");
@@ -42,7 +42,7 @@ namespace Lemonade
             setOffset(20, 39);
             setDrags(1251, 0);
 
-            maxVelocity.X = 330;
+            maxVelocity.X = 230;
             maxVelocity.Y = 2130;
 
 			#if __ANDROID__
@@ -50,7 +50,7 @@ namespace Lemonade
 			maxVelocity.Y/=1.75f;
 			#endif
 
-            runSpeed = 40;
+            runSpeed = 35;
             setJumpValues(-310.0f, -410.0f, 0.35f, 0.075f);
             numberOfJumps = 1;
 

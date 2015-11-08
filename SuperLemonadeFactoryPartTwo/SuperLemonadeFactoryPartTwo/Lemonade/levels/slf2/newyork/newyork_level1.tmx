@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="70" height="40" tilewidth="20" tileheight="20">
- <tileset firstgid="1" name="tiles_newyork" tilewidth="20" tileheight="20">
-  <image source="../../../../../XNAModeContent/Lemonade/tiles_newyork.png" width="400" height="400"/>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="70" height="40" tilewidth="20" tileheight="20" nextobjectid="4">
+ <tileset firstgid="1" name="tiles_newyork" tilewidth="20" tileheight="20" tilecount="400">
+  <image source="../../../../../SuperLemonadeFactoryPartTwoContent/Lemonade/tiles_newyork.png" width="400" height="400"/>
   <terraintypes>
    <terrain name="solid" tile="-1"/>
   </terraintypes>
@@ -134,9 +134,9 @@
 129,130,133,131,130,133,130,134,131,134,133,132,130,130,134,130,130,134,133,134,131,132,132,130,131,134,131,132,131,131,131,132,133,130,132,133,134,130,132,134,134,132,131,134,130,131,131,134,134,133,132,133,131,132,131,132,133,130,131,134,130,133,134,133,133,133,134,133,133,135
 </data>
  </layer>
- <objectgroup name="boxes" width="70" height="40">
-  <object x="140" y="580">
-   <polyline points="0,0 460,0"/>
+ <objectgroup name="boxes">
+  <object id="3" x="102" y="662">
+   <polyline points="0,0 174,0 437,-79 534,-83"/>
   </object>
  </objectgroup>
 </map>
