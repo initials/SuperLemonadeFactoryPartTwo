@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="50" height="50" tilewidth="20" tileheight="20">
- <tileset firstgid="1" name="tiles_sydney" tilewidth="20" tileheight="20">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="20" tileheight="20" nextobjectid="2">
+ <tileset firstgid="1" name="tiles_sydney" tilewidth="20" tileheight="20" tilecount="400">
   <image source="../../../../../SuperLemonadeFactoryPartTwoContent/Lemonade/tiles_sydney.png" width="400" height="400"/>
   <terraintypes>
    <terrain name="regularBlocks" tile="-1"/>
@@ -144,8 +144,8 @@
 129,130,132,130,133,134,131,134,133,131,132,131,132,130,132,132,134,131,132,130,132,133,131,134,130,133,132,130,130,131,131,131,132,131,131,133,133,132,131,133,133,134,131,133,131,133,133,130,133,135
 </data>
  </layer>
- <objectgroup name="boxes" width="50" height="50">
-  <object x="940" y="220">
+ <objectgroup name="boxes">
+  <object id="1" x="940" y="220">
    <polyline points="-40,0 -80,0 -80,80 -80,340 -140,340 -140,480"/>
   </object>
  </objectgroup>
