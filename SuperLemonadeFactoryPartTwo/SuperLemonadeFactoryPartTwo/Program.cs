@@ -37,26 +37,43 @@ namespace Loader_SuperLemonadeFactory
 
             //Lemonade.Lemonade_Globals.PAID_VERSION = Lemonade.Lemonade_Globals.PIRATE_MODE;
             Lemonade.Lemonade_Globals.PAID_VERSION = Lemonade.Lemonade_Globals.FULL_MODE;
+            string buildType = "FULL";
+
 
 #if DEBUG
             FlxG.debug = true;
+            buildType = "DEBUG";
+
 #endif
 
 
 #if DEMO
             Lemonade.Lemonade_Globals.PAID_VERSION = Lemonade.Lemonade_Globals.DEMO_MODE;
+            buildType = "DEMO";
 #endif
 #if FULL
             Lemonade.Lemonade_Globals.PAID_VERSION = Lemonade.Lemonade_Globals.FULL_MODE;
 #endif
 #if PIRATE
             Lemonade.Lemonade_Globals.PAID_VERSION = Lemonade.Lemonade_Globals.PIRATE_MODE;
+            buildType = "CRACKED";
 #endif
 
 
             FlxG.BUILD_TYPE = FlxG.BUILD_TYPE_PC;
 
 
+            using (System.IO.StreamWriter file =
+            new System.IO.StreamWriter(@"version.txt"))
+            {
+                file.WriteLine(typeof(Lemonade.Actor).Assembly.GetName().Version);
+            }
+
+            using (System.IO.StreamWriter file =
+            new System.IO.StreamWriter(@"buildType.txt"))
+            {
+                file.WriteLine(buildType);
+            }
 
 
         }
