@@ -28,7 +28,7 @@ namespace Loader_SuperLemonadeFactory
         public FlxFactory()
         {
             //Read the GAMESETTINGS.txt file
-
+            /*
             string gameSettings = File.ReadAllText("GAMESETTINGS.txt");
             string[] splitter = gameSettings.Split('\n');
             //Console.WriteLine(splitter[0]);
@@ -38,10 +38,23 @@ namespace Loader_SuperLemonadeFactory
             if (splitter[2].Substring(11).StartsWith("1"))
                 FlxG.fullscreen = true;
             FlxG.zoom = Convert.ToInt32(splitter[3].Substring(5));
+            */
+            int div = 2;
+            FlxG.zoom = 1;
+#if ! DEBUG
+            FlxG.zoom = 2;
+            div = 1;
+            FlxG.fullscreen = true;
+
+#endif
+            FlxG.resolutionWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width/div;
+            FlxG.resolutionHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height/div;
 
 
-            //set up the graphics device and the content manager
-            _graphics = new GraphicsDeviceManager(this);
+
+
+               //set up the graphics device and the content manager
+               _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
             if (FlxG.fullscreen)
@@ -74,7 +87,7 @@ namespace Loader_SuperLemonadeFactory
             }
             _graphics.ApplyChanges();
 
-            Console.WriteLine("Running Game at Settings: {0}x{1} Fullscreen?:{2} // Preferrred {3} {4}", FlxG.resolutionWidth, FlxG.resolutionHeight, FlxG.fullscreen, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height);
+            Console.WriteLine("Running Game at Settings: {0}x{1}\nFullscreen?: {2}\nPreferrred: {3}x{4}", FlxG.resolutionWidth, FlxG.resolutionHeight, FlxG.fullscreen, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height);
 
             FlxG.Game = this;
 #if !WINDOWS_PHONE
