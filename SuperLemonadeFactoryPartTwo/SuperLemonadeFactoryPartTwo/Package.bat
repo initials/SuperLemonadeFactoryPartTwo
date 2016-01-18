@@ -7,4 +7,4 @@ echo %BUILD_NUMBER%
 set /p BUILD_TYPE=<"buildType.txt"
 echo %BUILD_TYPE%
 
-"C:\Program Files\7-Zip\7z" a -tzip ../../zip/SuperLemonadeFactoryPartTwo.%BUILD_TYPE%.%BUILD_NUMBER%.zip * -r
+"C:\Program Files\7-Zip\7z" a -tzip ../../zip/SuperLemonadeFactoryPartTwo.%BUILD_TYPE%.%BUILD_NUMBER%.zip * -r -x!Package.bat
