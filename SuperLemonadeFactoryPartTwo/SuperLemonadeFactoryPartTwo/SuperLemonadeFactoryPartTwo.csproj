@@ -30,7 +30,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.8.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.9.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -138,6 +138,9 @@
     <Compile Include="Lemonade\states\PlayState.cs" />
     <Compile Include="Lemonade\states\VictoryState.cs" />
     <Compile Include="Lemonade\states\_____MenuState.cs" />
+    <None Include=".itch.toml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Package.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
